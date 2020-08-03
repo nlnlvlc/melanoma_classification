@@ -1,18 +1,4 @@
-# Classification of Skin Lesion Images as Benign or Malignant
-
-
-## Outline:
------------------------------------------
-    ├── models                     <- Saved models
-    ├── README.md                  <- The project layout (this file)
-    ├── images                     <- This is where the images are located
-    │
-    ├── notebook.ipynb             <- This is the main notebook 
-    │
-    ├── presentation.pptx          <- Non-technical presentation
-    │
-    ├── other_images               <- ppt and README images
-
+# Benign v Malignant Melanoma and Lesion Classification
 
 ## Introduction: 
 
