@@ -17,12 +17,14 @@ Images were resized to 224 x 224 pixels for Keras models and 256 x 256 pixels fo
 
 A basic CNN was used as the baseline model for Keras and Pytorch. In order to further improve the PyTorch model, two models using the pretrained Resnet34 network were used in. Due to complexities with PyTorch Binary and Multicategorical functions, the PyTorch ResNet Model will be used for analysis.
 
+**Update Aug 4, 20202** Alternative models were ran got each base model adjusting the size and color (grayscale) to check impact of parameters, viewable under the ***Additional Models*** directory of this repository. For the person of this ReadMe, the results will focus solely on the original models.
+
 
 ## Results:
 
 The second Keras model performed that best with a 76% accuracy and ~.59 Loss. The model showed some improvement from 73% and an ~.65 Loss from the first model. Both models with a batch size of 32. The first model ran through 10 epochs and the second through 40 epochs, suggesting this model can perform well with significantly more epochs with the same datasets. A pretrained ResNet50 model was attempted though the memory necessary for the model to run was not available.
 
-The ResNet34 PyTorch Models performed similarly to the first Keras model though only on 6 epochs and smaller batch size. The base PyTorch method varied greatly, with the most recent model producing inconsistent accuracies of 50% or 100%. The base PyTorch model only trained and tested the malignant class. Failing to train or predict a certain class does seem to be a periodic issue with CrossEntropyLoss functions in PyTorch, greatly hampering Binary classifications such as this one. Attempts to use BinaryCrossEntropy and Sigmoid functions produced an error that cannot currently be resolved within the current version of PyTorch.
+The ResNet34 PyTorch Models performed similarly to the first Keras model though only on 6 epochs and smaller batch size. The base PyTorch method varied greatly, with the most recent model producing inconsistent accuracies of 50% or 100%. The base PyTorch did not produce adequate results do to the limitations in batch size and GPU usage, so training was only able to happen on a small number of batches at a time, limiting how much the model could learn.
 
 ## Conclusion & Future Work:
 
