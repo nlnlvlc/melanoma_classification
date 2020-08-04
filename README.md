@@ -8,13 +8,15 @@ Melanoma is the deadliest form of skin cancer in the world. Even with an ~91% su
 
 The data was sourced directly from the <a href='https://www.isic-archive.com/'>International Skin Imaging Collaboration (ISIC)</a> as well as the <a href='https://www.kaggle.com/c/siim-isic-melanoma-classification'>2020 Kaggle Melanoma Classification Challenge</a>. Kaggle sources their data from ISIC though their dataset does differ in size than what is available via the ISIC Archive, likely including images not yet submitted to the archive's gallery.
 
-A total of 15,764 images were sources, broken down as follows: 9692 training images (5404: benign, 4288: malignant); 4135 testing images (2214: benign, 1921:malignant); 1937 validation images (826: benign, 1111: malignant).
+
+![Dataset Breakdown](https://github.com/nlnlvlc/melanoma_classification/blob/master/Screen%20Shot%202020-08-04%20at%201.37.03%20PM.png)
 
 ## Method:
 
 Images were resized to 224 x 224 pixels for Keras models and 256 x 256 pixels for PyTorch models. Images were augmented to further diversify the images as they passed through the models. Models using ResNet34 were tuned and tested in two variations: with manipulation to the Fully Connected Layer, only; unfreezing and optimizer interal ResNet34 layers.
 
 A basic CNN was used as the baseline model for Keras and Pytorch. In order to further improve the PyTorch model, two models using the pretrained Resnet34 network were used in. Due to complexities with PyTorch Binary and Multicategorical functions, the PyTorch ResNet Model will be used for analysis.
+
 
 ## Results:
 
